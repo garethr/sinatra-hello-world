@@ -1,7 +1,15 @@
-require 'application'
+#!/usr/bin/env ruby
 
-set :env,       :development
-set :port,      4567
-disable :run, :reload
+require 'rubygems'
+require 'sinatra'
+
+views_path = File.join(File.dirname(__FILE__), 'views') 
+Sinatra::Application.default_options.merge!( 
+  :views => views_path, 
+  :run => false, 
+  :env => :production 
+) 
+
+load 'application.rb' 
 
 run Sinatra.application

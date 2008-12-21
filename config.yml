@@ -1,10 +1,10 @@
 ---
-     environment: development
+     environment: production
      chdir: /www/projects/sinatra-s3
      address: 127.0.0.1
      user: root
      group: admin
-     port: 4567
+     port: 4568
      pid: /www/projects/sinatra-s3/thin.pid
      rackup: /www/projects/sinatra-s3/config.ru
      log: /www/projects/sinatra-s3/thin.log
