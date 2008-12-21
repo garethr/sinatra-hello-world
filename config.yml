@@ -1,0 +1,14 @@
+---
+     environment: development
+     chdir: /www/projects/sinatra-s3
+     address: 127.0.0.1
+     user: root
+     group: admin
+     port: 4567
+     pid: /www/projects/sinatra-s3/thin.pid
+     rackup: /www/projects/sinatra-s3/config.ru
+     log: /www/projects/sinatra-s3/thin.log
+     max_conns: 1024
+     timeout: 30
+     max_persistent_conns: 512
+     daemonize: false
