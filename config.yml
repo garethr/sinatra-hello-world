@@ -10,5 +10,6 @@
      log: /www/projects/sinatra-s3/thin.log
      max_conns: 1024
      timeout: 30
+     servers: 1
      max_persistent_conns: 512
      daemonize: false

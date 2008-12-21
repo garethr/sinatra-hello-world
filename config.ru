@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require 'rubygems'
 require 'sinatra'
 
@@ -10,6 +8,6 @@ Sinatra::Application.default_options.merge!(
   :env => :production 
 ) 
 
-load 'application.rb' 
+load 'app.rb' 
 
 run Sinatra.application

@@ -1,0 +1,21 @@
+h2. Sinatra
+
+<pre>./app.rb</pre>
+
+h2. Thin
+
+<pre>thin -C config.yml -R config.ru start</pre>
+
+<pre>thin -C config.yml -R config.ru stop</pre>
+
+h2. God
+
+<pre>sudo god</pre>
+
+<pre>sudo status</pre>
+
+<pre>sudo god monitor thin-sinatra-s3</pre>
+
+<pre>sudo god start thin-sinatra-s3</pre>
+
+<pre>sudo god stop thin-sinatra-s3</pre>
