@@ -1,13 +1,13 @@
 ---
      environment: production
-     chdir: /www/projects/sinatra-s3
+     chdir: "/www/projects/sinatra-hello-world"
      address: 127.0.0.1
      user: root
      group: admin
-     port: 4568
-     pid: /www/projects/sinatra-s3/thin.pid
-     rackup: /www/projects/sinatra-s3/config.ru
-     log: /www/projects/sinatra-s3/thin.log
+     port: 4567
+     pid: "/www/projects/sinatra-hello-world/thin.pid"
+     rackup: "/www/projects/sinatra-hello-world/config.ru"
+     log: "/www/projects/sinatra-hello-world/log/thin.log"
      max_conns: 1024
      timeout: 30
      servers: 1

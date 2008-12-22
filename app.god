@@ -1,5 +1,5 @@
-THIN_CONFIG = "/www/projects/sinatra-s3/config.yml"
-RACK_CONFIG = "/www/projects/sinatra-s3/config.ru"
+THIN_CONFIG = "/www/projects/sinatra-hello-world/config.yml"
+RACK_CONFIG = "/www/projects/sinatra-hello-world/config.ru"
 
 config = YAML.load_file(THIN_CONFIG)
 
@@ -9,7 +9,7 @@ num_servers = config["servers"] ||= 1
   number = config['socket'] ? i : (config['port'] + i)
 
   God.watch do |w|
-    w.name = "thin-sinatra-s3"
+    w.name = "thin-sinatra-hello-world"
   
     w.interval = 30.seconds
   

@@ -6,10 +6,10 @@ require 'sinatra'
 set :public, "public"
 
 get '/' do
-  'Hello world!'
+  'Hello world'
 end
 
-get '/bob' do
+get '/index' do
   erb :index
 end
 
