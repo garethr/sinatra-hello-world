@@ -1,21 +1,57 @@
-h2. Sinatra
+h2. Introduction
+
+This here application is a glorified Hello World using the "Sinatra":http://sinatra.rubyforge.org/ Ruby web framework. If you're thinking that a hello world example doesn't need a test suite, logging, configuration for multiple web servers and code that will restart it if it runs too hot, you'd be right.
+
+h2. Running
+
+Much of the code included in this example application is concerned with configuration for deploying with various other ruby tools.
+
+h3. Sinatra
+
+Sinatra comes with it's own web server.
 
 <pre>./app.rb</pre>
 
-h2. Thin
+h3. Thin
+
+Alternatively you can use an instance of "Thin":http://code.macournoyer.com/thin/.
 
 <pre>thin -C config.yml -R config.ru start</pre>
 
 <pre>thin -C config.yml -R config.ru stop</pre>
 
-h2. God
+h3. God
+
+If you're feeling particularly fancy then you can keep the Thin server up and running with "God":http://god.rubyforge.org/.
+
+First start the god daemon:
 
 <pre>sudo god</pre>
 
 <pre>sudo status</pre>
 
-<pre>sudo god monitor thin-sinatra-s3</pre>
+Then load your configuration and start the monitor:
 
-<pre>sudo god start thin-sinatra-s3</pre>
+<pre>sudo god load thin-sinatra-hello-world</pre>
 
-<pre>sudo god stop thin-sinatra-s3</pre>
+<pre>sudo god monitor thin-sinatra-hello-world</pre>
+
+Then run a few commands to demonstrate everything is in running order.
+
+<pre>sudo status</pre>
+
+<pre>sudo god start thin-sinatra-hello-world</pre>
+
+<pre>sudo god stop thin-sinatra-hello-world</pre>
+
+h2. Testing
+
+So far you run a few very simple tests, either with unittest or with "RSpec":http://rspec.info/.
+
+To run the unit tests simply run:
+
+<pre>rake</pre>
+
+To run the RSpec tests run:
+
+<pre>rake spec</pre>

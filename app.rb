@@ -5,7 +5,6 @@
 # TODO: comments
 # TODO: RDoc task
 # TODO: views tests with templates
-# TODO: update REAME
 # TODO: Rake task to clean up logs dir
 # TODO: gem spec
 # TODO: capistrano recipe
