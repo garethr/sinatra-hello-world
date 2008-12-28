@@ -55,3 +55,12 @@ To run the unit tests simply run:
 To run the RSpec tests run:
 
 <pre>rake spec</pre>
+
+h2. Integrity
+
+The project also comes with basic configs for the "Integrity":http://integrityapp.com/ continuos integration server. Just run:
+
+<pre>thin -C configs/integrity_thin.yml -R configs/integrity.ru start</pre>
+
+Integrity will be available on http://localhost:8910.
+
