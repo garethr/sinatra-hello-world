@@ -5,8 +5,8 @@
      user: root
      group: admin
      port: 4567
-     pid: "/www/projects/sinatra-hello-world/thin.pid"
-     rackup: "/www/projects/sinatra-hello-world/config.ru"
+     pid: "/www/projects/sinatra-hello-world/configs/thin.pid"
+     rackup: "/www/projects/sinatra-hello-world/configs/config.ru"
      log: "/www/projects/sinatra-hello-world/log/thin.log"
      max_conns: 1024
      timeout: 30

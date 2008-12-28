@@ -16,9 +16,9 @@ h3. Thin
 
 Alternatively you can use an instance of "Thin":http://code.macournoyer.com/thin/.
 
-<pre>thin -C config.yml -R config.ru start</pre>
+<pre>thin -C configs/config.yml -R configs/config.ru start</pre>
 
-<pre>thin -C config.yml -R config.ru stop</pre>
+<pre>thin -C configs/config.yml -R configs/config.ru stop</pre>
 
 h3. God
 
