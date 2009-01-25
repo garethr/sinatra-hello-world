@@ -2,16 +2,19 @@
 
 # TODO: test coverage 
 # TODO: pylint equivalent
-# TODO: comments
+# TODO: comments in source
 # TODO: RDoc task
 # TODO: views tests with templates
 # TODO: Rake task to clean up logs dir
 # TODO: gem spec
 # TODO: capistrano recipe
 # TODO: Rspec tests
+# TODO: database interaction
 
 require 'rubygems'
 require 'sinatra'
+
+require 'helpers'
 
 set :public, "public"
 
@@ -20,7 +23,31 @@ get '/' do
 end
 
 get '/index' do
+  header 'Content-Type' => 'text/html; charset=utf-8'
+  @title = "Title"
   erb :index
+end
+
+get '/param/:name' do
+  bar(params[:name])
+end
+
+get '/splat/*/*' do
+  params["splat"][0] + params["splat"][1]
+end
+
+
+get '/home' do
+  redirect '/'
+end
+
+get '/force' do
+  redirect '/', 301
+end
+
+get '/gone' do
+  status 410
+  "Gone"
 end
 
 not_found do

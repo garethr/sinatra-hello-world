@@ -1,5 +1,6 @@
 .DS_Store
 *.pid
-builds/*
 log/*
 integrity.db
+rcov/*
+docs/*
