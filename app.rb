@@ -1,9 +1,6 @@
 #!/usr/bin/env ruby
 
-# TODO: test coverage 
-# TODO: pylint equivalent
 # TODO: comments in source
-# TODO: RDoc task
 # TODO: views tests with templates
 # TODO: Rake task to clean up logs dir
 # TODO: gem spec
