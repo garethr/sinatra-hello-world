@@ -2,12 +2,13 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-    <title><%= @title %></title>
+    <title><%= @title %> <%= @page_title %></title>
 </head>
 <body>
     <h1>Hello World</h1>
     <div>
         <%= yield %>
     </div>
+    Version <%= @version %>
 </body>
 </html>

@@ -18,13 +18,24 @@ require 'helpers'
 
 set :public, "public"
 
+configure do
+  Sample = "test"
+  Version = Sinatra::VERSION
+end
+
+before do
+  @title = "before"
+  @version = Version
+end
+
 get '/' do
   'Hello world'
 end
 
 get '/index' do
   header 'Content-Type' => 'text/html; charset=utf-8'
-  @title = "Title"
+  @page_title = "Title"
+  @string = Sample
   erb :index
 end
 
@@ -35,7 +46,6 @@ end
 get '/splat/*/*' do
   params["splat"][0] + params["splat"][1]
 end
-
 
 get '/home' do
   redirect '/'
