@@ -1,6 +1,10 @@
+# this rackup file is used to run the application
+# when run via the Thin rack interace 
+
 require 'rubygems'
 require 'sinatra'
 
+# we need to manually specify where our views live
 views_path = File.join(File.dirname(__FILE__), 'views') 
 Sinatra::Application.default_options.merge!( 
   :views => views_path, 
@@ -8,6 +12,6 @@ Sinatra::Application.default_options.merge!(
   :env => :production 
 ) 
 
-load 'app.rb' 
-
+# then load and run the application
+load 'app.rb'
 run Sinatra.application

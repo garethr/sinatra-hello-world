@@ -1,4 +1,3 @@
-# change these to reflect your project path
 THIN_CONFIG = "/www/projects/sinatra-hello-world/config.yml"
 RACK_CONFIG = "/www/projects/sinatra-hello-world/config.ru"
 
